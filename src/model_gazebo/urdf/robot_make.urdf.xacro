@@ -1,0 +1,23 @@
+<robot name="make" xmlns:xacro="http://wiki.ros.org/xacro">
+    <!--  包含惯性矩阵文件-->
+    <xacro:include filename="head.xacro" />
+    <!-- 组合小车底盘-->
+    <xacro:include filename="robot_base.urdf.xacro" />
+    <!-- 单线雷达-->
+    <xacro:include filename="robot_lidar.urdf.xacro" /> 
+    <!-- 相机 -->
+    <xacro:include filename="robot_camera.urdf.xacro" /> 
+    <!-- imu -->
+    <xacro:include filename="robot_imu.urdf.xacro"/>
+   
+    <!-- 运动控制 -->
+    <xacro:include filename="gazebo/move.xacro"/>
+    <!-- 单线雷达驱动 -->
+     <xacro:include filename="gazebo/lidar.xacro"/> 
+    <!-- 相机驱动 -->
+     <xacro:include filename="gazebo/camera.xacro" /> 
+    <!-- Aiva驱动 -->
+     <xacro:include filename="livox_avia.xacro"/>
+     <!-- imu驱动 -->
+     <xacro:include filename="gazebo/imu.xacro"/>
+</robot>

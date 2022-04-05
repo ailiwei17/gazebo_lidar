@@ -1,0 +1,17 @@
+<launch>
+    <!-- 1. 参数服务器 -->
+    <param name="robot_description" command="$(find xacro)/xacro $(find model)/urdf/xacro/robot_make.urdf.xacro" />
+    <!--  2. 启动rviz-->
+    <node pkg="rviz" type="rviz" name="rviz"  args=" -d $(find model)/config/rviz/robot_config.rviz" />
+    <!-- 3. 添加关节状态节点 -->
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" output="screen" />
+    <!--  4.添加机器人状态节点-->
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen" />
+    <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_gui" output="screen" />
+    <node name="arbotix" pkg="arbotix_python" type="arbotix_driver" output="screen">
+        <rosparam file="$(find model)/config/control.yaml" command="load" />
+        <param name="sim" value="true" />
+    </node>
+
+</launch>
+
