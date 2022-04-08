@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  
-  <xacro:property name="M_PI" value="3.1415926"/> 
+
+<xacro:property name="M_PI" value="3.14159"/> 
   <xacro:property name="laser_min_range" value="0.1"/>
   <xacro:property name="laser_max_range" value="200.0"/>
   <xacro:property name="horizontal_fov" value="70.4"/>
@@ -94,7 +94,8 @@
     <xacro:Livox_Mid_gazebo_sensor name="${name}" visualize="${visualize}"/>
   </xacro:macro>
 
-  <xacro:Livox_AVIA name="livox"/>
+  <xacro:Livox_AVIA name="livox" />
+
 
 <xacro:property name="livox_length" value="0.09"/>
 <xacro:property name="livox_x" value="0.1"/>

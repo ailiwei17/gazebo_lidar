@@ -8,7 +8,7 @@
     <!-- 相机 -->
     <xacro:include filename="robot_camera.urdf.xacro" /> 
     <!-- imu -->
-    <xacro:include filename="robot_imu.urdf.xacro"/>
+    <xacro:include filename="robot_imu.urdf.xacro"/> 
    
     <!-- 运动控制 -->
     <xacro:include filename="gazebo/move.xacro"/>
@@ -19,5 +19,5 @@
     <!-- Aiva驱动 -->
      <xacro:include filename="livox_avia.xacro"/>
      <!-- imu驱动 -->
-     <xacro:include filename="gazebo/imu.xacro"/>
+      <xacro:include filename="gazebo/imu.xacro"/> 
 </robot>
