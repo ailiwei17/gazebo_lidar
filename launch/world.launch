@@ -1,0 +1,6 @@
+<launch>
+    <!-- 启动 Gazebo -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch" >
+        <arg name="world_name" value="$(find model_gazebo)/worlds/livox.world"/>
+    </include>
+</launch>
